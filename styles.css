@@ -477,6 +477,26 @@ a { color: inherit; }
   transition-delay: var(--rd);
 }
 
+/* ---------- Minimal placeholder page ---------- */
+.page-min {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100svh;
+}
+.page-min #main { flex: 1 0 auto; display: flex; }
+.hero--solo { flex: 1; min-height: 0; }
+
+.hero__note {
+  font-size: clamp(0.95rem, 0.9rem + 0.25vw, 1.12rem);
+  line-height: 1.65;
+  color: var(--muted);
+  max-width: 33rem;
+  margin: 0;
+}
+
+.footer--min { flex-shrink: 0; }
+
 /* ---------- Responsive ---------- */
 @media (max-width: 720px) {
   .topnav { display: none; }

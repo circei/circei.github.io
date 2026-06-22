@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Andrei Cîrcei — Software Engineer</title>
-  <meta name="description" content="Andrei Cîrcei — software engineer building reliable backend systems and the interfaces on top of them." />
+  <title>Andrei Cîrcei</title>
+  <meta name="description" content="Andrei Cîrcei — personal site, coming soon." />
   <meta name="color-scheme" content="dark" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Andrei Cîrcei — Software Engineer" />
-  <meta property="og:description" content="Software engineer building reliable backend systems and the interfaces on top of them." />
+  <meta property="og:title" content="Andrei Cîrcei" />
+  <meta property="og:description" content="Personal site, coming soon." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://andreicircei.ro" />
 
@@ -17,239 +17,33 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-  <a class="skip" href="#main">Skip to content</a>
-
-  <header class="topbar">
-    <a class="wordmark" href="#top" aria-label="Andrei Cîrcei — home">
-      <span class="wordmark__mark" aria-hidden="true"></span>
-      AC<span class="wordmark__dot">.</span>
-    </a>
-    <nav class="topnav" aria-label="Primary">
-      <a href="#work">Work</a>
-      <a href="#projects">Projects</a>
-      <a href="#stack">Stack</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-
+<body class="page-min">
   <main id="main">
-    <!-- HERO -->
-    <section class="hero" id="top">
+    <section class="hero hero--solo" id="top">
       <canvas class="hero__signal" aria-hidden="true"></canvas>
       <div class="hero__inner">
         <p class="eyebrow">
           <span class="eyebrow__pulse" aria-hidden="true"></span>
-          Software Engineer — Remote · Romania
+          Personal site — in progress
         </p>
         <h1 class="hero__title">
           Andrei<br /><span class="hero__title-accent">Cîrcei</span>
         </h1>
-        <p class="hero__lede">
-          I build reliable backend systems and the interfaces that make them
-          legible. Distributed services, careful data models, and tools that
-          hold up under real load.
+        <p class="hero__note">
+          Software engineer. A proper site is on the way — for now this is just
+          a placeholder while I settle on the design.
         </p>
-        <div class="hero__actions">
-          <a class="btn btn--solid" href="#contact">Get in touch</a>
-          <a class="btn btn--ghost" href="#work">See selected work</a>
-        </div>
-        <dl class="hero__facts">
-          <div class="fact">
-            <dt>Focus</dt>
-            <dd>Backend &amp; platform</dd>
-          </div>
-          <div class="fact">
-            <dt>Experience</dt>
-            <dd>7+ years shipping</dd>
-          </div>
-          <div class="fact">
-            <dt>Status</dt>
-            <dd><span class="dot-open" aria-hidden="true"></span>Open to work</dd>
-          </div>
-        </dl>
       </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section class="band about" id="about">
-      <p class="section-label">About</p>
-      <div class="about__grid">
-        <p class="about__big">
-          I care about the parts users never see — the schema that ages well,
-          the queue that drains cleanly, the migration that runs at 3am without
-          waking anyone up.
-        </p>
-        <div class="about__body">
-          <p>
-            Over the last several years I've worked across the stack with a bias
-            toward the systems underneath: designing APIs teams actually enjoy
-            using, taming legacy services without big rewrites, and keeping an
-            eye on the numbers that matter — latency, error budgets, cost.
-          </p>
-          <p>
-            I like small, sharp teams where engineering and product sit close
-            together, and I write things down so the next person doesn't have to
-            reverse-engineer a decision.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- SELECTED WORK — years are the structural markers -->
-    <section class="band work" id="work">
-      <p class="section-label">Selected work</p>
-      <ol class="timeline">
-        <li class="entry">
-          <div class="entry__year">2023<span class="entry__now">— now</span></div>
-          <div class="entry__main">
-            <h3 class="entry__role">Senior Software Engineer <span class="entry__co">· Northbeam Labs</span></h3>
-            <p class="entry__desc">
-              Lead engineer on the data platform. Rebuilt the ingestion pipeline
-              to handle 5× the volume at half the cost, and cut p99 API latency
-              from 900ms to under 120ms.
-            </p>
-            <ul class="tags" aria-label="Technologies">
-              <li>Go</li><li>PostgreSQL</li><li>Kafka</li><li>Kubernetes</li>
-            </ul>
-          </div>
-        </li>
-        <li class="entry">
-          <div class="entry__year">2020<span class="entry__now">— 2023</span></div>
-          <div class="entry__main">
-            <h3 class="entry__role">Software Engineer <span class="entry__co">· Vela Systems</span></h3>
-            <p class="entry__desc">
-              Shipped the billing and entitlements service from scratch and grew
-              it to handle every paying customer. Owned on-call for the
-              payments domain and drove it to zero revenue-impacting incidents.
-            </p>
-            <ul class="tags" aria-label="Technologies">
-              <li>TypeScript</li><li>Node.js</li><li>Stripe</li><li>AWS</li>
-            </ul>
-          </div>
-        </li>
-        <li class="entry">
-          <div class="entry__year">2017<span class="entry__now">— 2020</span></div>
-          <div class="entry__main">
-            <h3 class="entry__role">Full-Stack Developer <span class="entry__co">· Bright Pixel Studio</span></h3>
-            <p class="entry__desc">
-              Built and launched products for early-stage clients — from the
-              database up to the React frontend. Wore every hat, learned what
-              holds up in production and what doesn't.
-            </p>
-            <ul class="tags" aria-label="Technologies">
-              <li>React</li><li>Python</li><li>Django</li><li>Redis</li>
-            </ul>
-          </div>
-        </li>
-      </ol>
-    </section>
-
-    <!-- PROJECTS -->
-    <section class="band projects" id="projects">
-      <p class="section-label">Things I've built</p>
-      <div class="cards">
-        <article class="card">
-          <div class="card__head">
-            <h3 class="card__title">Driftwood</h3>
-            <span class="card__kind">Open source</span>
-          </div>
-          <p class="card__desc">
-            A schema-diffing tool that turns Postgres migrations into reviewable
-            plans. Catches the destructive change before it reaches the PR.
-          </p>
-          <ul class="tags" aria-label="Technologies">
-            <li>Rust</li><li>SQL</li>
-          </ul>
-          <a class="card__link" href="#" aria-label="View Driftwood">View project<span aria-hidden="true">↗</span></a>
-        </article>
-        <article class="card">
-          <div class="card__head">
-            <h3 class="card__title">Tideline</h3>
-            <span class="card__kind">Side project</span>
-          </div>
-          <p class="card__desc">
-            A self-hosted status page that derives uptime from your own metrics
-            instead of yet another pinger. Honest numbers, no vanity.
-          </p>
-          <ul class="tags" aria-label="Technologies">
-            <li>Go</li><li>SQLite</li><li>HTMX</li>
-          </ul>
-          <a class="card__link" href="#" aria-label="View Tideline">View project<span aria-hidden="true">↗</span></a>
-        </article>
-        <article class="card">
-          <div class="card__head">
-            <h3 class="card__title">Foglamp</h3>
-            <span class="card__kind">Writing</span>
-          </div>
-          <p class="card__desc">
-            Notes on running databases in production — the failure modes I keep
-            meeting and the boring fixes that actually work.
-          </p>
-          <ul class="tags" aria-label="Topics">
-            <li>Essays</li><li>Postgres</li>
-          </ul>
-          <a class="card__link" href="#" aria-label="Read Foglamp">Read<span aria-hidden="true">↗</span></a>
-        </article>
-      </div>
-    </section>
-
-    <!-- STACK / CAPABILITIES — clusters, no rating bars -->
-    <section class="band stack" id="stack">
-      <p class="section-label">Stack</p>
-      <div class="stack__grid">
-        <div class="cluster">
-          <h3 class="cluster__title">Languages</h3>
-          <p class="cluster__items">Go · TypeScript · Python · Rust · SQL</p>
-        </div>
-        <div class="cluster">
-          <h3 class="cluster__title">Backend</h3>
-          <p class="cluster__items">PostgreSQL · Kafka · Redis · gRPC · REST</p>
-        </div>
-        <div class="cluster">
-          <h3 class="cluster__title">Infra</h3>
-          <p class="cluster__items">Kubernetes · Docker · Terraform · AWS · GitHub Actions</p>
-        </div>
-        <div class="cluster">
-          <h3 class="cluster__title">Frontend</h3>
-          <p class="cluster__items">React · Next.js · HTMX · TypeScript</p>
-        </div>
-        <div class="cluster">
-          <h3 class="cluster__title">Practice</h3>
-          <p class="cluster__items">Observability · CI/CD · Incident response · Code review</p>
-        </div>
-        <div class="cluster">
-          <h3 class="cluster__title">Speak</h3>
-          <p class="cluster__items">Romanian (native) · English (fluent)</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="band contact" id="contact">
-      <p class="section-label">Contact</p>
-      <h2 class="contact__title">Let's build something that lasts.</h2>
-      <p class="contact__lede">
-        Open to senior backend and platform roles, plus the occasional
-        well-scoped contract. The fastest way to reach me is email.
-      </p>
-      <a class="contact__email" href="mailto:hello@andreicircei.ro">hello@andreicircei.ro</a>
-      <ul class="contact__links" aria-label="Elsewhere">
-        <li><a href="#">GitHub</a></li>
-        <li><a href="#">LinkedIn</a></li>
-        <li><a href="#">Résumé (PDF)</a></li>
-      </ul>
     </section>
   </main>
 
-  <footer class="footer">
+  <footer class="footer footer--min">
     <span>© <span id="year">2026</span> Andrei Cîrcei</span>
-    <span class="footer__note">Demo content — placeholder text to be replaced.</span>
-    <a href="#top" class="footer__top">Back to top ↑</a>
+    <span class="footer__note">Demo placeholder — design not finalised.</span>
   </footer>
 
   <script src="main.js" defer></script>
