@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>M3 Kinetic</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+:root{--bg:#0C0D12;--text:#F3F1EC;--mut:#8A8A98;--c1:#FF6B4A;--c2:#A06BFF;--c3:#3DA9FF}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:"Bricolage Grotesque",sans-serif;height:100vh;overflow:hidden;position:relative}
+.glow{position:fixed;border-radius:50%;filter:blur(90px);opacity:.55;z-index:0}
+.g1{width:46vw;height:46vw;left:-8vw;top:-12vw;background:radial-gradient(circle,var(--c1),transparent 70%)}
+.g2{width:50vw;height:50vw;right:-12vw;top:6vh;background:radial-gradient(circle,var(--c2),transparent 70%)}
+.g3{width:40vw;height:40vw;left:24vw;bottom:-18vw;background:radial-gradient(circle,var(--c3),transparent 70%)}
+.wrap{position:relative;z-index:2;height:100vh;display:flex;flex-direction:column;justify-content:space-between;padding:2.4rem 3rem 0}
+.top{display:flex;justify-content:space-between;font-family:"IBM Plex Mono";font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mut)}
+.top b{color:var(--text);font-weight:500}
+.hero{padding-bottom:1rem}
+.kick{font-family:"IBM Plex Mono";font-size:.82rem;letter-spacing:.22em;text-transform:uppercase;color:var(--mut);margin-bottom:1rem}
+h1{font-weight:800;font-size:clamp(4rem,15vw,12rem);line-height:.82;letter-spacing:-.045em}
+h1 .grad{background:linear-gradient(100deg,var(--c1),var(--c2) 55%,var(--c3));-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{margin-top:1.4rem;font-family:"IBM Plex Mono";font-size:.95rem;color:var(--text);max-width:32rem;line-height:1.55}
+.marquee{position:relative;z-index:2;overflow:hidden;border-top:1px solid #20212B;border-bottom:1px solid #20212B;padding:.9rem 0;white-space:nowrap}
+.track{display:inline-block;animation:sc 22s linear infinite;font-weight:700;font-size:1.7rem;letter-spacing:-.01em}
+.track span{color:var(--mut);margin:0 1.1rem}
+.track b{color:var(--text);font-weight:700}
+@keyframes sc{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+</style></head>
+<body>
+<div class="glow g1"></div><div class="glow g2"></div><div class="glow g3"></div>
+<div class="wrap">
+  <div class="top"><div><b>Andrei Cîrcei</b></div><div>Software Engineer — Brașov, RO</div></div>
+  <div class="hero">
+    <div class="kick">Embedded · Automation · Vehicle systems</div>
+    <h1>Andrei<br/><span class="grad">Cîrcei.</span></h1>
+    <p class="sub">// I build embedded systems and the automation around them — C, Python, and clean delivery.</p>
+  </div>
+  <div class="marquee"><div class="track">
+    <b>EMBEDDED</b><span>·</span><b>C</b><span>·</span><b>PYTHON</b><span>·</span><b>CAN / CANoe</b><span>·</span><b>AUTOMATION</b><span>·</span><b>GITLAB CI/CD</b><span>·</span><b>RASPBERRY PI</b><span>·</span>
+    <b>EMBEDDED</b><span>·</span><b>C</b><span>·</span><b>PYTHON</b><span>·</span><b>CAN / CANoe</b><span>·</span><b>AUTOMATION</b><span>·</span><b>GITLAB CI/CD</b><span>·</span><b>RASPBERRY PI</b><span>·</span>
+  </div></div>
+</div>
+</body></html>

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>M1 Telemetry</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+:root{--bg:#0A1416;--panel:#0F1E21;--text:#EAE5D7;--mut:#7E8C89;--amber:#E6A14B;--teal:#46B39A;--green:#8FD46A;--line:#1C3034}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:"IBM Plex Mono",monospace;height:100vh;overflow:hidden}
+canvas{position:fixed;inset:0;width:100%;height:100%;z-index:0}
+.hud{position:relative;z-index:2;height:100vh;display:flex;flex-direction:column;justify-content:space-between;padding:2.2rem 2.6rem}
+.row{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem}
+.tag{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mut)}
+.tag b{color:var(--teal);font-weight:500}
+.live{display:inline-flex;align-items:center;gap:.5rem;color:var(--amber)}
+.live::before{content:"";width:.5rem;height:.5rem;border-radius:50%;background:var(--amber);box-shadow:0 0 12px var(--amber)}
+.center{align-self:flex-start;max-width:60rem}
+.kick{font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;color:var(--amber);margin-bottom:1.2rem}
+h1{font-family:"Fraunces",serif;font-weight:500;font-size:clamp(3.5rem,11vw,8.5rem);line-height:.9;letter-spacing:-.02em}
+h1 em{color:var(--amber);font-weight:400}
+.sub{margin-top:1.4rem;font-size:1rem;color:var(--text);max-width:34rem;line-height:1.6}
+.gauges{display:flex;gap:2.6rem;flex-wrap:wrap}
+.g .lbl{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);margin-bottom:.35rem}
+.g .val{font-family:"Fraunces",serif;font-size:1.5rem;color:var(--text)}
+.g .val span{color:var(--teal);font-size:.9rem;font-family:"IBM Plex Mono"}
+.corner{font-size:.7rem;color:var(--mut);letter-spacing:.12em}
+</style></head>
+<body>
+<canvas id="c"></canvas>
+<div class="hud">
+  <div class="row">
+    <div class="tag">SYS · <b>EMBEDDED // AUTOMATION</b></div>
+    <div class="tag live">SIGNAL ACQUIRED</div>
+  </div>
+  <div class="center">
+    <div class="kick">Software Engineer — Brașov, RO</div>
+    <h1>Andrei <em>Cîrcei</em></h1>
+    <p class="sub">Embedded systems &amp; automation. Low-level C, Python tooling, and the pipelines that keep it all shipping.</p>
+  </div>
+  <div class="row" style="align-items:flex-end">
+    <div class="gauges">
+      <div class="g"><div class="lbl">Bus</div><div class="val">CAN <span>500k</span></div></div>
+      <div class="g"><div class="lbl">Stack</div><div class="val">C · Py</div></div>
+      <div class="g"><div class="lbl">Pipeline</div><div class="val">GitLab <span>CI</span></div></div>
+      <div class="g"><div class="lbl">Uptime</div><div class="val">2y+ <span>@e-novation</span></div></div>
+    </div>
+    <div class="corner">45.66°N · 25.61°E</div>
+  </div>
+</div>
+<script>
+const c=document.getElementById('c'),x=c.getContext('2d');let w,h,d=Math.min(devicePixelRatio||1,2);
+function rs(){w=innerWidth;h=innerHeight;c.width=w*d;c.height=h*d;x.setTransform(d,0,0,d,0,0)}rs();addEventListener('resize',rs);
+const cols=['#46B39A','#E6A14B','#8FD46A'];
+function f(t){x.clearRect(0,0,w,h);
+ x.strokeStyle='#13262A';x.lineWidth=1;const s=Math.max(46,w/22);x.beginPath();
+ for(let i=0;i<=w;i+=s){x.moveTo(i,0);x.lineTo(i,h)}for(let j=0;j<=h;j+=s){x.moveTo(0,j);x.lineTo(w,j)}x.stroke();
+ cols.forEach((col,k)=>{const mid=h*(0.38+0.16*k);x.beginPath();
+  for(let px=0;px<=w;px+=4){const y=mid+Math.sin(px*0.012+t*0.0011*(1+k*0.4)+k)*22*Math.sin(px*0.002+t*0.0004)+Math.sin(px*0.05+t*0.002+k)*6;px===0?x.moveTo(px,y):x.lineTo(px,y)}
+  x.globalAlpha=k===0?0.9:0.4;x.strokeStyle=col;x.lineWidth=k===0?2:1.3;x.shadowColor=col;x.shadowBlur=12;x.stroke();x.shadowBlur=0;x.globalAlpha=1});
+ const sx=(t*0.06)%w;x.strokeStyle='rgba(230,161,75,.5)';x.lineWidth=1;x.beginPath();x.moveTo(sx,0);x.lineTo(sx,h);x.stroke();
+ requestAnimationFrame(f)}requestAnimationFrame(f);
+</script></body></html>
