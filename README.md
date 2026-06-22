@@ -1,24 +1,23 @@
 # andreicircei.ro
 
-Personal CV / portfolio site. Static HTML/CSS/JS, hosted on GitHub Pages with the
-custom domain `andreicircei.ro`.
+Personal CV / portfolio site for Andrei Cîrcei — software engineer (embedded
+systems & automation). Static HTML/CSS/JS, hosted on GitHub Pages with the
+custom domain `andreicircei.ro` (HTTPS enforced).
 
-> **Demo content.** The copy and links are placeholders — replace the text in
-> `index.html` and the social/email links with your real details.
+Design: "Swiss editorial" — light cool-gray ground, ink type, a single
+electric-blue accent. Space Grotesk (display + body) and IBM Plex Mono (labels).
 
 ## Files
 
-| File          | Purpose                                          |
-| ------------- | ------------------------------------------------ |
-| `index.html`  | Page markup and all content                      |
-| `styles.css`  | Design system + layout                           |
-| `main.js`     | Hero signal animation, scroll reveals            |
-| `CNAME`       | Custom domain for GitHub Pages (`andreicircei.ro`) |
-| `.nojekyll`   | Serve files as-is (skip Jekyll processing)       |
+| File          | Purpose                                            |
+| ------------- | -------------------------------------------------- |
+| `index.html`  | Page markup and all content                        |
+| `styles.css`  | Design system + layout (`:root` holds the palette) |
+| `main.js`     | Footer year + reveal-on-scroll                     |
+| `CNAME`       | Custom domain (`andreicircei.ro`)                  |
+| `.nojekyll`   | Serve files as-is (skip Jekyll)                    |
 
 ## Local preview
-
-Open `index.html` directly in a browser, or serve it:
 
 ```sh
 python3 -m http.server 8000
@@ -27,6 +26,5 @@ python3 -m http.server 8000
 
 ## Editing
 
-- **Text & links** — all in `index.html`. Look for the `Demo content` markers.
+- **Text & links** — all in `index.html`.
 - **Colours & fonts** — the `:root` block at the top of `styles.css`.
-- **Hero animation** — `main.js` (`waves` array controls the trace).

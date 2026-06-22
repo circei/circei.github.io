@@ -5,19 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Andrei Cîrcei — Software Engineer</title>
   <meta name="description" content="Andrei Cîrcei — software engineer focused on embedded systems and automation, based in Brașov, Romania." />
-  <meta name="color-scheme" content="dark" />
+  <meta name="color-scheme" content="light" />
 
-  <!-- Open Graph -->
   <meta property="og:title" content="Andrei Cîrcei — Software Engineer" />
   <meta property="og:description" content="Embedded systems and automation engineer based in Brașov, Romania." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://andreicircei.ro" />
 
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230D1719'/%3E%3Cpath d='M5 19 q4 -11 7 0 q3 9 6 -4 q2 -7 4 3 q1 4 5 2' fill='none' stroke='%23E6A14B' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23ECEDEF'/%3E%3Ctext x='16' y='23' font-family='Arial,sans-serif' font-size='20' font-weight='bold' text-anchor='middle' fill='%230B0E14'%3EA%3C/text%3E%3Crect x='6' y='25' width='20' height='3' fill='%231B3CFF'/%3E%3C/svg%3E" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -25,10 +24,7 @@
   <a class="skip" href="#main">Skip to content</a>
 
   <header class="topbar">
-    <a class="wordmark" href="#top" aria-label="Andrei Cîrcei — home">
-      <span class="wordmark__mark" aria-hidden="true"></span>
-      AC<span class="wordmark__dot">.</span>
-    </a>
+    <a class="wordmark" href="#top"><b>Andrei Cîrcei</b> — Software Engineer</a>
     <nav class="topnav" aria-label="Primary">
       <a href="#work">Experience</a>
       <a href="#education">Education</a>
@@ -40,48 +36,34 @@
   <main id="main">
     <!-- HERO -->
     <section class="hero" id="top">
-      <canvas class="hero__signal" aria-hidden="true"></canvas>
-      <div class="hero__inner">
-        <p class="eyebrow">
-          <span class="eyebrow__pulse" aria-hidden="true"></span>
-          Software Engineer — Embedded &amp; Automation
-        </p>
-        <h1 class="hero__title">
-          Andrei<br /><span class="hero__title-accent">Cîrcei</span>
-        </h1>
-        <p class="hero__lede">
-          I build embedded systems and the automation around them — low-level C,
-          Python tooling that takes the friction out of testing, and pipelines
-          that keep everything shipping cleanly.
-        </p>
-        <div class="hero__actions">
-          <a class="btn btn--solid" href="#contact">Get in touch</a>
-          <a class="btn btn--ghost" href="#work">See experience</a>
+      <div class="hero__mid">
+        <div class="hero__lead">
+          <p class="kicker"><i aria-hidden="true"></i>Embedded systems &amp; automation</p>
+          <h1 class="hero__title">Andrei<br /><span class="uacc">Cîrcei</span></h1>
+          <p class="hero__sub">
+            I build embedded systems and the automation around them — low-level
+            C, Python tooling, and clean delivery pipelines.
+          </p>
         </div>
-        <dl class="hero__facts">
-          <div class="fact">
-            <dt>Focus</dt>
-            <dd>Embedded &amp; automation</dd>
-          </div>
-          <div class="fact">
-            <dt>Currently</dt>
-            <dd>Software Engineer @ e-novation</dd>
-          </div>
-          <div class="fact">
-            <dt>Based in</dt>
-            <dd><span class="dot-open" aria-hidden="true"></span>Brașov, Romania</dd>
-          </div>
-        </dl>
+        <div class="hero__index" aria-hidden="true">01 — <span>ENGINEER</span> / BRAȘOV</div>
+      </div>
+      <div class="hero__foot">
+        <span class="hero__status"><span class="dot" aria-hidden="true"></span>Currently @ e-novation GmbH</span>
+        <ul class="hero__pills" aria-label="Core stack">
+          <li class="pill">C</li><li class="pill">Python</li><li class="pill">CAN</li><li class="pill">CI/CD</li>
+        </ul>
+        <span>RO · 2024 →</span>
       </div>
     </section>
 
     <!-- ABOUT -->
-    <section class="band about" id="about">
-      <p class="section-label">About</p>
+    <section class="band" id="about">
+      <p class="seclabel"><span class="num">01</span> About</p>
       <div class="about__grid">
-        <p class="about__big">
-          I like building efficient, scalable systems and solving real-world
-          problems with software that does its job quietly and well.
+        <p class="about__lead">
+          I like building efficient, scalable systems and solving
+          <span class="hl">real-world problems</span> with software that does
+          its job quietly and well.
         </p>
         <div class="about__body">
           <p>
@@ -100,9 +82,9 @@
       </div>
     </section>
 
-    <!-- EXPERIENCE — years are the structural markers -->
-    <section class="band work" id="work">
-      <p class="section-label">Experience</p>
+    <!-- EXPERIENCE -->
+    <section class="band" id="work">
+      <p class="seclabel"><span class="num">02</span> Experience</p>
       <ol class="timeline">
         <li class="entry">
           <div class="entry__year">2024<span class="entry__now">— now</span></div>
@@ -116,7 +98,7 @@
               consistent integration and delivery.
             </p>
             <ul class="tags" aria-label="Technologies">
-              <li>C</li><li>Python</li><li>CANoe / CANalyzer</li><li>GitLab CI/CD</li><li>Raspberry Pi</li>
+              <li class="pill">C</li><li class="pill">Python</li><li class="pill">CANoe / CANalyzer</li><li class="pill">GitLab CI/CD</li><li class="pill">Raspberry Pi</li>
             </ul>
           </div>
         </li>
@@ -130,7 +112,7 @@
               Python — and worked on sharpening their analytical thinking.
             </p>
             <ul class="tags" aria-label="Technologies">
-              <li>JavaScript</li><li>C#</li><li>Python</li><li>Teaching</li>
+              <li class="pill">JavaScript</li><li class="pill">C#</li><li class="pill">Python</li><li class="pill">Teaching</li>
             </ul>
           </div>
         </li>
@@ -144,7 +126,7 @@
               recruiting across the region.
             </p>
             <ul class="tags" aria-label="Areas">
-              <li>Recruiting</li><li>Data collection</li><li>Coordination</li>
+              <li class="pill">Recruiting</li><li class="pill">Data collection</li><li class="pill">Coordination</li>
             </ul>
           </div>
         </li>
@@ -152,43 +134,36 @@
     </section>
 
     <!-- EDUCATION -->
-    <section class="band projects" id="education">
-      <p class="section-label">Education &amp; certifications</p>
-      <div class="cards">
-        <article class="card">
-          <div class="card__head">
-            <h3 class="card__title">BSc Computer Science</h3>
-            <span class="card__kind">2022 – 2025</span>
+    <section class="band" id="education">
+      <p class="seclabel"><span class="num">03</span> Education &amp; certifications</p>
+      <ul class="edu">
+        <li>
+          <div>
+            <h3 class="edu__title">BSc Computer Science</h3>
+            <p class="edu__meta">Universitatea Transilvania din Brașov</p>
           </div>
-          <p class="card__desc">
-            Universitatea Transilvania din Brașov. Bachelor's degree in Computer
-            Science.
-          </p>
-        </article>
-        <article class="card">
-          <div class="card__head">
-            <h3 class="card__title">Cambridge C1 Advanced</h3>
-            <span class="card__kind">2021</span>
+          <span class="edu__year">2022 – 2025</span>
+        </li>
+        <li>
+          <div>
+            <h3 class="edu__title">Cambridge C1 Advanced</h3>
+            <p class="edu__meta">Certificate in Advanced English (CEFR C1) · ID B5389190</p>
           </div>
-          <p class="card__desc">
-            Certificate in Advanced English (CEFR level C1). ID B5389190.
-          </p>
-        </article>
-        <article class="card">
-          <div class="card__head">
-            <h3 class="card__title">Unity Course</h3>
-            <span class="card__kind">2021</span>
+          <span class="edu__year">2021</span>
+        </li>
+        <li>
+          <div>
+            <h3 class="edu__title">Unity Course</h3>
+            <p class="edu__meta">Game &amp; interactive development · Logiscool</p>
           </div>
-          <p class="card__desc">
-            Game and interactive development with Unity, completed at Logiscool.
-          </p>
-        </article>
-      </div>
+          <span class="edu__year">2021</span>
+        </li>
+      </ul>
     </section>
 
     <!-- STACK -->
-    <section class="band stack" id="stack">
-      <p class="section-label">Stack</p>
+    <section class="band" id="stack">
+      <p class="seclabel"><span class="num">04</span> Stack</p>
       <div class="stack__grid">
         <div class="cluster">
           <h3 class="cluster__title">Languages</h3>
@@ -218,8 +193,8 @@
     </section>
 
     <!-- CONTACT -->
-    <section class="band contact" id="contact">
-      <p class="section-label">Contact</p>
+    <section class="band" id="contact">
+      <p class="seclabel"><span class="num">05</span> Contact</p>
       <h2 class="contact__title">Let's talk.</h2>
       <p class="contact__lede">
         Happy to talk embedded systems, automation, or any interesting
@@ -227,15 +202,15 @@
       </p>
       <a class="contact__email" href="mailto:andreicircei78@gmail.com">andreicircei78@gmail.com</a>
       <ul class="contact__links" aria-label="Elsewhere">
-        <li><a href="https://github.com/circei" target="_blank" rel="noopener">GitHub</a></li>
-        <li><a href="https://www.linkedin.com/in/andreicircei-3761a31a2/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/circei" target="_blank" rel="noopener">GitHub ↗</a></li>
+        <li><a href="https://www.linkedin.com/in/andreicircei-3761a31a2/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
       </ul>
     </section>
   </main>
 
   <footer class="footer">
     <span>© <span id="year">2026</span> Andrei Cîrcei</span>
-    <span class="footer__note">Brașov, Romania</span>
+    <span>Brașov, Romania</span>
     <a href="#top" class="footer__top">Back to top ↑</a>
   </footer>
 
