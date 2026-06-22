@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Andrei Cîrcei</title>
-  <meta name="description" content="Andrei Cîrcei — personal site, coming soon." />
+  <title>Andrei Cîrcei — Software Engineer</title>
+  <meta name="description" content="Andrei Cîrcei — software engineer focused on embedded systems and automation, based in Brașov, Romania." />
   <meta name="color-scheme" content="dark" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Andrei Cîrcei" />
-  <meta property="og:description" content="Personal site, coming soon." />
+  <meta property="og:title" content="Andrei Cîrcei — Software Engineer" />
+  <meta property="og:description" content="Embedded systems and automation engineer based in Brașov, Romania." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://andreicircei.ro" />
 
@@ -17,33 +17,226 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="page-min">
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <a class="wordmark" href="#top" aria-label="Andrei Cîrcei — home">
+      <span class="wordmark__mark" aria-hidden="true"></span>
+      AC<span class="wordmark__dot">.</span>
+    </a>
+    <nav class="topnav" aria-label="Primary">
+      <a href="#work">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#stack">Stack</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
   <main id="main">
-    <section class="hero hero--solo" id="top">
+    <!-- HERO -->
+    <section class="hero" id="top">
       <canvas class="hero__signal" aria-hidden="true"></canvas>
       <div class="hero__inner">
         <p class="eyebrow">
           <span class="eyebrow__pulse" aria-hidden="true"></span>
-          Personal site — in progress
+          Software Engineer — Embedded &amp; Automation
         </p>
         <h1 class="hero__title">
           Andrei<br /><span class="hero__title-accent">Cîrcei</span>
         </h1>
-        <p class="hero__note">
-          Software engineer. A proper site is on the way — for now this is just
-          a placeholder while I settle on the design.
+        <p class="hero__lede">
+          I build embedded systems and the automation around them — low-level C,
+          Python tooling that takes the friction out of testing, and pipelines
+          that keep everything shipping cleanly.
         </p>
+        <div class="hero__actions">
+          <a class="btn btn--solid" href="#contact">Get in touch</a>
+          <a class="btn btn--ghost" href="#work">See experience</a>
+        </div>
+        <dl class="hero__facts">
+          <div class="fact">
+            <dt>Focus</dt>
+            <dd>Embedded &amp; automation</dd>
+          </div>
+          <div class="fact">
+            <dt>Currently</dt>
+            <dd>Software Engineer @ e-novation</dd>
+          </div>
+          <div class="fact">
+            <dt>Based in</dt>
+            <dd><span class="dot-open" aria-hidden="true"></span>Brașov, Romania</dd>
+          </div>
+        </dl>
       </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="band about" id="about">
+      <p class="section-label">About</p>
+      <div class="about__grid">
+        <p class="about__big">
+          I like building efficient, scalable systems and solving real-world
+          problems with software that does its job quietly and well.
+        </p>
+        <div class="about__body">
+          <p>
+            Open-minded and always learning — I think steady curiosity is what
+            actually drives good engineering. Across a few different roles I've
+            also picked up the practical things: working in a team, staying
+            level under pressure, and managing my own time and priorities.
+          </p>
+          <p>
+            These days my focus is embedded development and automation: writing
+            low-level C, building Python tools and scripts, analysing vehicle
+            communication, and keeping CI/CD pipelines healthy so integration
+            and delivery stay smooth.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE — years are the structural markers -->
+    <section class="band work" id="work">
+      <p class="section-label">Experience</p>
+      <ol class="timeline">
+        <li class="entry">
+          <div class="entry__year">2024<span class="entry__now">— now</span></div>
+          <div class="entry__main">
+            <h3 class="entry__role">Software Engineer <span class="entry__co">· e-novation GmbH</span></h3>
+            <p class="entry__desc">
+              Embedded systems and automation. Low-level work in C, plus Python
+              tools and scripts that streamline testing and development. I use
+              Vector's CANoe/CANalyzer for vehicle communication analysis,
+              prototype on Raspberry Pi, and maintain GitLab CI/CD pipelines for
+              consistent integration and delivery.
+            </p>
+            <ul class="tags" aria-label="Technologies">
+              <li>C</li><li>Python</li><li>CANoe / CANalyzer</li><li>GitLab CI/CD</li><li>Raspberry Pi</li>
+            </ul>
+          </div>
+        </li>
+        <li class="entry">
+          <div class="entry__year">2022<span class="entry__now">— 2024</span></div>
+          <div class="entry__main">
+            <h3 class="entry__role">Training Instructor, IT <span class="entry__co">· Logiscool Brașov</span></h3>
+            <p class="entry__desc">
+              Part-time. Taught programming and computational thinking to kids
+              and teens — from visual logic blocks up to JavaScript, C#, and
+              Python — and worked on sharpening their analytical thinking.
+            </p>
+            <ul class="tags" aria-label="Technologies">
+              <li>JavaScript</li><li>C#</li><li>Python</li><li>Teaching</li>
+            </ul>
+          </div>
+        </li>
+        <li class="entry">
+          <div class="entry__year">2020<span class="entry__now">— 2022</span></div>
+          <div class="entry__main">
+            <h3 class="entry__role">Regional Recruiting Lead, Romania <span class="entry__co">· FocusData</span></h3>
+            <p class="entry__desc">
+              Sourced multilingual voice recordings from contributors around the
+              world to train and improve AI speech systems, and coordinated
+              recruiting across the region.
+            </p>
+            <ul class="tags" aria-label="Areas">
+              <li>Recruiting</li><li>Data collection</li><li>Coordination</li>
+            </ul>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="band projects" id="education">
+      <p class="section-label">Education &amp; certifications</p>
+      <div class="cards">
+        <article class="card">
+          <div class="card__head">
+            <h3 class="card__title">BSc Computer Science</h3>
+            <span class="card__kind">2022 – 2025</span>
+          </div>
+          <p class="card__desc">
+            Universitatea Transilvania din Brașov. Bachelor's degree in Computer
+            Science.
+          </p>
+        </article>
+        <article class="card">
+          <div class="card__head">
+            <h3 class="card__title">Cambridge C1 Advanced</h3>
+            <span class="card__kind">2021</span>
+          </div>
+          <p class="card__desc">
+            Certificate in Advanced English (CEFR level C1). ID B5389190.
+          </p>
+        </article>
+        <article class="card">
+          <div class="card__head">
+            <h3 class="card__title">Unity Course</h3>
+            <span class="card__kind">2021</span>
+          </div>
+          <p class="card__desc">
+            Game and interactive development with Unity, completed at Logiscool.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- STACK -->
+    <section class="band stack" id="stack">
+      <p class="section-label">Stack</p>
+      <div class="stack__grid">
+        <div class="cluster">
+          <h3 class="cluster__title">Languages</h3>
+          <p class="cluster__items">C · Python · C/C++ · C# · JavaScript · SQL</p>
+        </div>
+        <div class="cluster">
+          <h3 class="cluster__title">Embedded &amp; vehicle</h3>
+          <p class="cluster__items">CANoe / CANalyzer · Vector tools · Raspberry Pi</p>
+        </div>
+        <div class="cluster">
+          <h3 class="cluster__title">Automation &amp; CI/CD</h3>
+          <p class="cluster__items">Python tooling · GitLab CI/CD · Git</p>
+        </div>
+        <div class="cluster">
+          <h3 class="cluster__title">Tools</h3>
+          <p class="cluster__items">Visual Studio · Unity</p>
+        </div>
+        <div class="cluster">
+          <h3 class="cluster__title">Also</h3>
+          <p class="cluster__items">Wix · Shopify · Canva · MS Office</p>
+        </div>
+        <div class="cluster">
+          <h3 class="cluster__title">Languages spoken</h3>
+          <p class="cluster__items">Romanian (native) · English (C1 Advanced)</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="band contact" id="contact">
+      <p class="section-label">Contact</p>
+      <h2 class="contact__title">Let's talk.</h2>
+      <p class="contact__lede">
+        Happy to talk embedded systems, automation, or any interesting
+        engineering problem. Email is the best way to reach me.
+      </p>
+      <a class="contact__email" href="mailto:andreicircei78@gmail.com">andreicircei78@gmail.com</a>
+      <ul class="contact__links" aria-label="Elsewhere">
+        <li><a href="https://github.com/circei" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/andreicircei-3761a31a2/" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
     </section>
   </main>
 
-  <footer class="footer footer--min">
+  <footer class="footer">
     <span>© <span id="year">2026</span> Andrei Cîrcei</span>
-    <span class="footer__note">Demo placeholder — design not finalised.</span>
+    <span class="footer__note">Brașov, Romania</span>
+    <a href="#top" class="footer__top">Back to top ↑</a>
   </footer>
 
   <script src="main.js" defer></script>
