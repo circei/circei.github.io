@@ -27,6 +27,7 @@
     <a class="wordmark" href="#top"><b>Andrei Cîrcei</b> — Software Engineer</a>
     <nav class="topnav" aria-label="Primary">
       <a href="#work">Experience</a>
+      <a href="#cases">Work</a>
       <a href="#education">Education</a>
       <a href="#stack">Stack</a>
       <a href="#contact">Contact</a>
@@ -91,14 +92,18 @@
           <div class="entry__main">
             <h3 class="entry__role">Software Engineer <span class="entry__co">· e-novation GmbH</span></h3>
             <p class="entry__desc">
-              Embedded systems and automation. Low-level work in C, plus Python
-              tools and scripts that streamline testing and development. I use
-              Vector's CANoe/CANalyzer for vehicle communication analysis,
-              prototype on Raspberry Pi, and maintain GitLab CI/CD pipelines for
-              consistent integration and delivery.
+              Embedded software and the automation around it, across several
+              automotive programs — commercial-vehicle, passenger-car and
+              lighting. I build hardware-in-the-loop test frameworks and the
+              GitLab CI/CD that runs them, work down at the level of UDS
+              diagnostics, secure flashing and ECU debugging, and up at
+              model-based code generation and in-vehicle communication. Lately
+              I've been wiring AI tooling into the hardware loop. Day to day:
+              low-level C, a lot of Python, and Lauterbach / Vector tools on the
+              bench.
             </p>
             <ul class="tags" aria-label="Technologies">
-              <li class="pill">C</li><li class="pill">Python</li><li class="pill">CANoe / CANalyzer</li><li class="pill">GitLab CI/CD</li><li class="pill">Raspberry Pi</li>
+              <li class="pill">C</li><li class="pill">Python</li><li class="pill">UDS / CAN</li><li class="pill">AUTOSAR</li><li class="pill">Lauterbach</li><li class="pill">GitLab CI/CD</li>
             </ul>
           </div>
         </li>
@@ -133,9 +138,101 @@
       </ol>
     </section>
 
+    <!-- SELECTED WORK -->
+    <section class="band" id="cases">
+      <p class="seclabel"><span class="num">03</span> Selected work</p>
+      <p class="cases__intro">
+        A look at the kind of problems I work on, grouped by theme. Client names
+        are withheld; each sits in automotive — commercial-vehicle,
+        passenger-car or lighting.
+      </p>
+      <ol class="cases">
+        <li class="case">
+          <span class="case__tag">Commercial-vehicle ECU program</span>
+          <h3 class="case__title">Hardware-in-the-loop test automation</h3>
+          <p class="case__desc">
+            Designed and grew a Raspberry-Pi-based hardware-in-the-loop test
+            framework for automotive ECUs — UDS diagnostics, automated flashing,
+            core-dump validation and release/smoke testing — all driven from
+            GitLab CI/CD in Python, and used as the team's release gate.
+          </p>
+          <ul class="tags" aria-label="Technologies">
+            <li class="pill">Python</li><li class="pill">UDS</li><li class="pill">CAN / LIN</li><li class="pill">GitLab CI/CD</li><li class="pill">Raspberry Pi</li>
+          </ul>
+        </li>
+        <li class="case">
+          <span class="case__tag">Commercial-vehicle &amp; lighting programs</span>
+          <h3 class="case__title">Secure flashing &amp; diagnostics</h3>
+          <p class="case__desc">
+            Built ECU flashing and secure access from the ground up: UDS
+            programming sessions, certificate-based authentication (PKI),
+            seed-&amp;-key, and CRC / E2E message protection implemented to
+            AUTOSAR and J1850 profiles.
+          </p>
+          <ul class="tags" aria-label="Technologies">
+            <li class="pill">UDS</li><li class="pill">PKI / certificates</li><li class="pill">E2E / CRC</li><li class="pill">AUTOSAR</li><li class="pill">Bootloader</li>
+          </ul>
+        </li>
+        <li class="case">
+          <span class="case__tag">Passenger-car &amp; lighting programs</span>
+          <h3 class="case__title">CI/CD platform engineering</h3>
+          <p class="case__desc">
+            Built and optimized GitLab pipelines for embedded build, secure-boot
+            signing and measurement-data processing — parallel runs, diagnostic
+            (ODX / PDX) build automation, plus notification and error-aggregation
+            tooling. Cut one data trace from 36&nbsp;GB to 0.6&nbsp;GB and trimmed
+            pipeline runtime and resource use.
+          </p>
+          <ul class="tags" aria-label="Technologies">
+            <li class="pill">GitLab CI/CD</li><li class="pill">Docker</li><li class="pill">Conan</li><li class="pill">ODX / PDX</li><li class="pill">Data processing</li>
+          </ul>
+        </li>
+        <li class="case">
+          <span class="case__tag">Commercial-vehicle ECU program</span>
+          <h3 class="case__title">Low-level embedded debugging</h3>
+          <p class="case__desc">
+            Root-caused deep faults on 32-bit automotive microcontrollers — NMI
+            traps, hardware safety-monitor alarms, and memory-layout / DMA issues
+            — using a Lauterbach debugger, crash-log decoding, linker maps and
+            on-chip breakpoints.
+          </p>
+          <ul class="tags" aria-label="Technologies">
+            <li class="pill">AURIX / TriCore</li><li class="pill">Lauterbach Trace32</li><li class="pill">Crash-log analysis</li><li class="pill">Assembly</li>
+          </ul>
+        </li>
+        <li class="case">
+          <span class="case__tag">Commercial-vehicle SW platform</span>
+          <h3 class="case__title">Model-based software &amp; code generation</h3>
+          <p class="case__desc">
+            Worked on a Python architecture-generation toolchain: meta-model →
+            ARXML, plus COVESA IFEX / VSS / Protobuf and SOME/IP deployment
+            configs for a service-oriented vehicle platform on QNX. Benchmarked
+            SOME/IP against zero-copy IPC (iceoryx) and uProtocol.
+          </p>
+          <ul class="tags" aria-label="Technologies">
+            <li class="pill">AUTOSAR / ARXML</li><li class="pill">COVESA (IFEX / VSS)</li><li class="pill">SOME/IP</li><li class="pill">QNX</li><li class="pill">Python</li>
+          </ul>
+        </li>
+        <li class="case">
+          <span class="case__tag">Commercial-vehicle &amp; passenger-car programs</span>
+          <h3 class="case__title">AI-assisted engineering tooling</h3>
+          <p class="case__desc">
+            Built MCP (Model Context Protocol) servers that expose a hardware
+            debugger and a bus-analysis tool to AI agents — cutting per-call
+            token use to tens or hundreds of tokens — and used LLM-driven
+            generation to turn requirements into executable test cases. A related
+            diagnostic-data automation cut a manual task from hours to seconds.
+          </p>
+          <ul class="tags" aria-label="Technologies">
+            <li class="pill">MCP</li><li class="pill">LLM tooling</li><li class="pill">Python</li><li class="pill">Automation</li>
+          </ul>
+        </li>
+      </ol>
+    </section>
+
     <!-- EDUCATION -->
     <section class="band" id="education">
-      <p class="seclabel"><span class="num">03</span> Education &amp; certifications</p>
+      <p class="seclabel"><span class="num">04</span> Education &amp; certifications</p>
       <ul class="edu">
         <li>
           <div>
@@ -163,27 +260,31 @@
 
     <!-- STACK -->
     <section class="band" id="stack">
-      <p class="seclabel"><span class="num">04</span> Stack</p>
+      <p class="seclabel"><span class="num">05</span> Stack</p>
       <div class="stack__grid">
         <div class="cluster">
           <h3 class="cluster__title">Languages</h3>
-          <p class="cluster__items">C · Python · C/C++ · C# · JavaScript · SQL</p>
+          <p class="cluster__items">C · Python · C/C++ · Ruby · CAPL · XSL/XSLT · Bash · SQL</p>
         </div>
         <div class="cluster">
-          <h3 class="cluster__title">Embedded &amp; vehicle</h3>
-          <p class="cluster__items">CANoe / CANalyzer · Vector tools · Raspberry Pi</p>
+          <h3 class="cluster__title">Vehicle &amp; diagnostics</h3>
+          <p class="cluster__items">UDS · CAN / CAN-FD · LIN · Automotive Ethernet · SOME/IP · E2E protection · XCP</p>
+        </div>
+        <div class="cluster">
+          <h3 class="cluster__title">Embedded &amp; AUTOSAR</h3>
+          <p class="cluster__items">AURIX / TriCore · AUTOSAR · ARXML · bootloader &amp; secure flashing · QNX · Linux</p>
+        </div>
+        <div class="cluster">
+          <h3 class="cluster__title">Debug &amp; test</h3>
+          <p class="cluster__items">Lauterbach Trace32 · Vector CANoe / CANalyzer · HIL test automation · crash-log analysis</p>
         </div>
         <div class="cluster">
           <h3 class="cluster__title">Automation &amp; CI/CD</h3>
-          <p class="cluster__items">Python tooling · GitLab CI/CD · Git</p>
+          <p class="cluster__items">GitLab CI/CD · Git · Docker · Conan · measurement-data pipelines</p>
         </div>
         <div class="cluster">
-          <h3 class="cluster__title">Tools</h3>
-          <p class="cluster__items">Visual Studio · Unity</p>
-        </div>
-        <div class="cluster">
-          <h3 class="cluster__title">Also</h3>
-          <p class="cluster__items">Wix · Shopify · Canva · MS Office</p>
+          <h3 class="cluster__title">AI tooling</h3>
+          <p class="cluster__items">MCP servers · LLM-assisted test generation · Raspberry Pi (CM4)</p>
         </div>
         <div class="cluster">
           <h3 class="cluster__title">Languages spoken</h3>
@@ -194,7 +295,7 @@
 
     <!-- CONTACT -->
     <section class="band" id="contact">
-      <p class="seclabel"><span class="num">05</span> Contact</p>
+      <p class="seclabel"><span class="num">06</span> Contact</p>
       <h2 class="contact__title">Let's talk.</h2>
       <p class="contact__lede">
         Happy to talk embedded systems, automation, or any interesting
